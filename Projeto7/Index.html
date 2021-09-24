@@ -5,24 +5,107 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS 
-        <link href="css/bootstrap.min.css" rel="stylesheet">-->
-
-        <link href="css/bootstrap.min.css" rel="stylesheet">       
-
         
-        
+        <link rel="stylesheet" href="css/Estilo.css">
 
-        <title>Bootstrap</title>
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/b695aa5588.js" crossorigin="anonymous"></script>
+
+        <title>Finans - Finanças Pessoais</title>
     </head>
 
-    <body style="margin-bottom: 200px; padding: 16px;">
+    <body>
         
-        
+        <header><!--Inicio Cabeçalho-->
 
-        <!-- Optional JavaScript; choose one of the two! -->
+            <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+                <div class="container">
+                    <a href="#" class="navbar-brand">
+                        <img src="img/logo.png" width="142">
+                    </a>
 
-        <!-- Option 1: Bootstrap Bundle with Popper -->
+                    <!-- Menu Hamburguer -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-principal"  aria-controls="nav-target" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="nav-principal">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Recursos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Benefícios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Preços</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" class="btn btn-outline-light ms-4">Entrar</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </nav>
+
+        </header><!--Fim Cabeçalho-->
+
+        <section id="home">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 d-none d-md-block d-flex">
+                        <img src="img/capa-mulher.png">
+                    </div>
+
+                    <div class="col-md-6 d-flex"><!--inicio texto seção-->
+                        <div class="align-self-center">
+                            <h1 class="display-4">Suas contas, descomplicadas</h1>
+                            <p>
+                                Usado por mais de 1 milhão de pessoas, o Finans é uma ferramenta online que vai facilitar sua vida financeira.
+                            </p>
+
+                            <p>Disponível para
+                                <a href="#" class="btn btn-outline-light">
+                                     <i class="fab fa-android fa-lg"></i>
+                                 </a>
+                                 <a href="#" class="btn btn-outline-light">
+                                     <i class="fab fa-apple"></i>
+                                </a>
+                            </p>
+
+                            <form class="mt-4 mb-4">
+                                <div class="input-group input-group-lg">
+                                    <input type="text" placeholder="Seu e-mail" class="form-control">
+                                    <button type="button" class="input-group-append btn btn-primary">Cadastre-se</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            
+
+                        </div>
+
+                    </div><!--fim texto seção-->
+                    
+                </div><!--fim row-->
+
+            </div>
+
+        </section>
+
+
+        <!-- JavaScript -->
         <script src="js/bootstrap.bundle.min.js"></script>
 
     </body>
