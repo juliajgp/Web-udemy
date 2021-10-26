@@ -73,6 +73,10 @@ nav.navbar-transparente {
     color: black;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+
 h1 {
     font-weight: 900px;
     letter-spacing: -0.05em;
@@ -98,6 +102,7 @@ h3 {
 @media (max-width: 575.98px) {
     .btn-custom {
         margin: 10px 15px;
+        font-size: 1em;
     }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
