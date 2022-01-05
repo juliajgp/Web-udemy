@@ -1,4 +1,5 @@
 <?php
+
 	$acao = 'recuperar';
 	require 'tarefa_controller.php';
 ?>
@@ -17,7 +18,7 @@
 			function editar(id, txt_tarefa){
 
 				let form = document.createElement('form');
-				form.action = '#';
+				form.action = 'tarefa_controller.php?acao=atualizar';
 				form.method = 'post';
 				form.className = 'row';
 
@@ -47,6 +48,14 @@
 
 				tarefa.insertBefore(form, tarefa[0]);
 
+			}
+
+			function remover(id){
+				location.href = 'todas_tarefas.php?acao=remover&id='+id;
+			}
+
+			function marcarRealizada(id){
+				location.href = 'todas_tarefas.php?acao=marcarRealizada&id='+id;
 			}
 		</script>
 	</head>
@@ -78,19 +87,19 @@
 								<h4>Todas tarefas</h4>
 								<hr />
 
-								<? foreach($tarefas as $indice => $tarefa){ ?>
+								<?php foreach($tarefas as $indice => $tarefa){ ?>
 									<div class="row mb-3 d-flex align-items-center tarefa">
 										<div class="col-sm-9" id="tarefa_<?= $tarefa->id ?>">
 											<?= $tarefa->tarefa ?> (<?= $tarefa->status ?>)
 										</div>
 
 										<div class="col-sm-3 mt-2 d-flex justify-content-between">
-											<i class="fas fa-trash-alt fa-lg text-danger"></i>
+											<i class="fas fa-trash-alt fa-lg text-danger" onclick="remover(<?= $tarefa->id ?>)"></i>
 											<i class="fas fa-edit fa-lg text-info" onclick="editar(<?= $tarefa->id ?>, '<?= $tarefa->tarefa ?>')"></i>
-											<i class="fas fa-check-square fa-lg text-success"></i>
+											<i class="fas fa-check-square fa-lg text-success" onclick="marcarRealizada(<?= $tarefa->id ?>)"></i>
 										</div>
 									</div>
-								<? } ?>
+								<?php } ?>
 								
 							</div>
 						</div>
