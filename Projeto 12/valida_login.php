@@ -1,8 +1,6 @@
 <?php
 
     session_start();
-    print_r($_SESSION);
-    echo '<hr>';
 
     //variavel que verifica se a aut. foi realizada
     $usuario_autenticado = false;
@@ -27,8 +25,10 @@
 
     if($usuario_autenticado){
         echo 'Usuário autenticado';
+        $_SESSION['autenticado'] = 'SIM';
     }
     if(!$usuario_autenticado){
+        $_SESSION['autenticado'] = 'NÃO';
         header('Location: index.php?login=erro');
     }
 
