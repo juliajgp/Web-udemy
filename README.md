@@ -56,4 +56,3 @@ App Lista de Tarefas
 ## Projeto em MySQL  (fora desse repositório)
 ### - Projeto 14
 App Loja Virtual
-### - Projeto 2
